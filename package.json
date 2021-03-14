@@ -1,0 +1,29 @@
+{
+    "name": "jal",
+    "displayName": "JAL",
+    "description": "Just Another Language for PIC microcontrollers",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "jal",
+            "aliases": ["Just Another Language (JAL)", "jal"],
+            "extensions": [".jal"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "jal",
+            "scopeName": "source.jal",
+            "path": "./syntaxes/jal.tmLanguage.json"
+        }],
+        "snippets": [{
+              "language": "JAL",
+              "path": "./snippets/jalsnippets.json"
+            }]
+    }
+}

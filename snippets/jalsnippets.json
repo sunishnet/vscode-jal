@@ -1,0 +1,8 @@
+{
+
+		"A for loop": {
+		  "prefix": ["for loop"],
+		  "body": ["for (${2:element}  loop ", "\t$0", "end loop"],
+		  "description": "A for loop."
+		}
+}
