@@ -1,6 +1,6 @@
 ## Just Another Language(JAL) Visual Studio Code Extension README
 
-JAL had jaledit for a long long time almost from the begining of JALV2. It worked pretty well on windows but was not updated since 2010.
+JAL had jaledit for a long long time, almost from the begining of JALV2. It worked pretty well on windows but was not updated since 2010.
 Being its author I felt VSCode might be a pretty good IDE which can be extended using its  extension framework.
 
 Its a big learning curve for me as it was developed in Delphi whereas vscode works with node/Javascript/Typescript.
