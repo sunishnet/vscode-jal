@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Just Another Language (JAL)",
-	"foldingStartMarker": "(?i)^\\s*(begin|if|forever loop|procedure)\\b",
+	"foldingStartMarker": "(?i)^\\s*(begin|if|forever loop|procedure|function)\\b",
   	"foldingStopMarker": "(?i)^\\s*(end)\\b",
   	"keyEquivalent": "^~S",
 	
@@ -11,6 +11,9 @@
 		},		
 		{
 			"include": "#keywords"
+		},		
+		{
+			"include": "#constants"
 		},
 		{
 			"include": "#strings"
@@ -29,6 +32,12 @@
 				"match": "\\b('get|'put|_debug|_error|_usec_delay|_warn|alias|asm|assembler|assert|at |bank|bit|block|byte|case|const|count|defined|dword|else|elsif|end|exit|float|for|forever|function|if|in|include|is|keep|local|loop|out|page|pragma|procedure|protection|record|repeat|sbit|sbyte|sdword|shared|start|suspend|sword|task|then|var|volatile|whereis|while|word)\\b"
 			}]
 		},		
+		"constants": {
+			"patterns": [{
+				"name": "constant.language.jal",
+				"match": "\\b(true|TRUE|false|FALSE|on|ON|off|OFF|high|HIGH|low|LOW)\\b"
+			}]
+		},				
 		"strings": {
 			"name": "string.quoted.double.jal",
 			"begin": "\"",

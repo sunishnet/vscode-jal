@@ -3,6 +3,7 @@
     "displayName": "JAL",
     "description": "Just Another Language for PIC microcontrollers",
     "version": "0.0.1",
+    "author": {"Sunish Issac"},
     "engines": {
         "vscode": "^1.54.0"
     },
