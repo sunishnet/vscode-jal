@@ -1,54 +1,68 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Just Another Language (JAL)",
-	"foldingStartMarker": "(?i)^\\s*(begin|if|forever loop|procedure|function)\\b",
-  	"foldingStopMarker": "(?i)^\\s*(end)\\b",
-  	"keyEquivalent": "^~S",
-	
-	"patterns": [
+  "foldingStartMarker": "(?i)^\\s*(begin|if|forever loop|procedure|function)\\b",
+  "foldingStopMarker": "(?i)^\\s*(end)\\b",
+  "keyEquivalent": "^~S",
+
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.control.jal",
+          "match": ";.*$|--.*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.jal",
+          "match": "\\b(?<!\\.)(?i:(alias|asm|assembler|assert|at |bank|bit|block|byte|case|const|count|defined|dword|else|elsif|end|exit|float|for|forever|function|if|in|include|is|keep|local|loop|out|page|pragma|procedure|protection|record|repeat|sbit|sbyte|sdword|shared|start|suspend|sword|task|then|var|volatile|whereis|while|word))\\b"
+        },
 		{
-			"include": "#comments"
-		},		
-		{
-			"include": "#keywords"
-		},		
-		{
-			"include": "#constants"
-		},
-		{
-			"include": "#strings"
+			"name": "keyword.control.other.jal",
+			"match": "\\b(?<!\\.)(?i:('get|'put|_debug|_error|_usec_delay|_warn|target))"
 		}
-	],
-	"repository": {
-		"comments": {
-			"patterns": [{
-				"name": "comment.control.jal",
-				"match": ";.*$|--.*$"
-			}]
-		},
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.jal",
-				"match": "\\b('get|'put|_debug|_error|_usec_delay|_warn|alias|asm|assembler|assert|at |bank|bit|block|byte|case|const|count|defined|dword|else|elsif|end|exit|float|for|forever|function|if|in|include|is|keep|local|loop|out|page|pragma|procedure|protection|record|repeat|sbit|sbyte|sdword|shared|start|suspend|sword|task|then|var|volatile|whereis|while|word)\\b"
-			}]
-		},		
-		"constants": {
-			"patterns": [{
-				"name": "constant.language.jal",
-				"match": "\\b(true|TRUE|false|FALSE|on|ON|off|OFF|high|HIGH|low|LOW)\\b"
-			}]
-		},				
-		"strings": {
-			"name": "string.quoted.double.jal",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.jal",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.jal"
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.jal",
+          "match": "\\b(?<!\\.)(?i:(true|false|on|off|high|low|input|output|all_output|all_in))\\b"
+        },
+		{
+			"name": "constant.language.other.jal",
+			"match": "\\b(?<!\\.)(?i:(CLOCK|OSC|WDT|BROWNOUT|MCLR|DISABLED|EXTERNAL|WDT|XINST|HS|DEBUG|CPUDIV|PLLDIV|LVP|DISABLED|EXTERNAL))\\b"
+		  }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.jal",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.jal",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.jal"
 }
