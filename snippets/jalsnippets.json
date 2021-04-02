@@ -1,8 +1,12 @@
 {
-
-		"A for loop": {
-		  "prefix": ["for loop"],
-		  "body": ["for (${2:element}  loop ", "\t$0", "end loop"],
-		  "description": "A for loop."
-		}
+  "for loop": {
+    "prefix": ["for loop"],
+    "body": ["for (${2:element}  loop ", "\t$0", "end loop"],
+    "description": "for loop."
+  },
+  "forever loop": {
+    "prefix": ["forever loop"],
+    "body": ["forever  loop ", "\t$0", "end loop"],
+    "description": "forever loop."
+  }
 }

@@ -1,12 +1,11 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Just Another Language (JAL)",
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Just Another Language (JAL)",
   "foldingStartMarker": "(?i)^\\s*(begin|if|forever loop|procedure|function)\\b",
   "foldingStopMarker": "(?i)^\\s*(end)\\b",
   "keyEquivalent": "^~S",
 
-  "patterns": [
-    {
+  "patterns": [{
       "include": "#comments"
     },
     {
@@ -21,47 +20,50 @@
   ],
   "repository": {
     "comments": {
-      "patterns": [
-        {
-          "name": "comment.control.jal",
-          "match": ";.*$|--.*$"
-        }
-      ]
+      "patterns": [{
+        "name": "comment.control.jal",
+        "match": ";.*$|--.*$"
+      }]
     },
     "keywords": {
-      "patterns": [
-        {
+      "patterns": [{
           "name": "keyword.control.jal",
           "match": "\\b(?<!\\.)(?i:(alias|asm|assembler|assert|at |bank|bit|block|byte|case|const|count|defined|dword|else|elsif|end|exit|float|for|forever|function|if|in|include|is|keep|local|loop|out|page|pragma|procedure|protection|record|repeat|sbit|sbyte|sdword|shared|start|suspend|sword|task|then|var|volatile|whereis|while|word))\\b"
         },
-		{
-			"name": "keyword.control.other.jal",
-			"match": "\\b(?<!\\.)(?i:('get|'put|_debug|_error|_usec_delay|_warn|target))"
-		}
+        {
+          "match": "\\b(\\=|\\>|\\<|\\!|\\?|\\+|\\-|\\*|\\/|\\&|\\^|\\%|\\=)\\b",
+          "name": "keyword.operator.jal"
+        },
+        {
+          "name": "keyword.control.other.jal",
+          "match": "\\b(?<!\\.)(?i:('get|'put|_debug|_error|_usec_delay|_warn|target))"
+        }
+        
       ]
     },
     "constants": {
-      "patterns": [
-        {
+      "patterns": [{
           "name": "constant.language.jal",
           "match": "\\b(?<!\\.)(?i:(true|false|on|off|high|low|input|output|all_output|all_in))\\b"
         },
-		{
-			"name": "constant.language.other.jal",
-			"match": "\\b(?<!\\.)(?i:(CLOCK|OSC|WDT|BROWNOUT|MCLR|DISABLED|EXTERNAL|WDT|XINST|HS|DEBUG|CPUDIV|PLLDIV|LVP|DISABLED|EXTERNAL))\\b"
-		  }
+        {
+          "match": "(\\b(0x([0-9a_-fA-F_])*\\b)|\\b(0b[0-1]*)\\b|\\b(([0-9_]+\\.?[0-9_]*)|(\\.[0-9_]+))\\b)",
+          "name": "constant.numeric.jal"
+        },
+        {
+          "name": "constant.language.other.jal",
+          "match": "\\b(?<!\\.)(?i:(CLOCK|OSC|WDT|BROWNOUT|MCLR|DISABLED|EXTERNAL|WDT|XINST|HS|DEBUG|CPUDIV|PLLDIV|LVP|DISABLED|EXTERNAL))\\b"
+        }
       ]
     },
     "strings": {
       "name": "string.quoted.double.jal",
       "begin": "\"",
       "end": "\"",
-      "patterns": [
-        {
-          "name": "constant.character.escape.jal",
-          "match": "\\\\."
-        }
-      ]
+      "patterns": [{
+        "name": "constant.character.escape.jal",
+        "match": "\\\\."
+      }]
     }
   },
   "scopeName": "source.jal"

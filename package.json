@@ -3,7 +3,8 @@
     "displayName": "JAL",
     "description": "Just Another Language for PIC microcontrollers",
     "version": "0.0.1",
-    "author": {"Sunish Issac"},
+    "author": "Sunish Issac",
+    "publisher": "suniship",
     "engines": {
         "vscode": "^1.54.0"
     },
@@ -13,7 +14,7 @@
     "contributes": {
         "languages": [{
             "id": "jal",
-            "aliases": ["Just Another Language (JAL)", "jal"],
+            "aliases": ["Just Another Language (jal)", "jal"],
             "extensions": [".jal"],
             "configuration": "./language-configuration.json"
         }],
@@ -23,8 +24,34 @@
             "path": "./syntaxes/jal.tmLanguage.json"
         }],
         "snippets": [{
-              "language": "JAL",
-              "path": "./snippets/jalsnippets.json"
-            }]
+            "language": "jal",
+            "path": "./snippets/jalsnippets.json"
+        }],
+        "configuration": {
+            "title": "jal",
+            "properties": {
+                "jal.paths.exePath": {
+                    "type": "string",
+                    "default": "D://jallib1.5//compiler//jalv2_64.exe",
+                    "description": "Exe path of JALV2.exe."
+                },
+                "jal.paths.LibPath": {
+                    "type": "string",
+                    "default": "D://jallib1.5//lib",
+                    "description": "Compiler path of jal."
+                },
+                "jal.paths.documentPath": {
+                    "type": "string",
+                    "default": "D://jallib1.5//doc",
+                    "description": "Document path of jal."
+                },
+                "jal.paths.programmerPath": {
+                    "type": "string",
+                    "default": "D://jallib1.5//pickit.bat",
+                    "description": "Programmer Path"
+                }
+            }
+        }
+
     }
 }
