@@ -8,7 +8,18 @@ Its a work in progress and hope to get all the features of Jaledit working here 
 
 
 ## Features
-First version does nothing but syntax highlighting and an attempt to code completion/
+* Syntax highlighting of
+    Comments (-- & ;)
+    Keywords (Control, Operator, Other)
+    Constants (Language,Numeric,Other)
+    Strings (Single/Double quote)
+* Code Folding
+    Procedures
+    Functions
+    Loops
+    Blocks
+
+
 
 ## Requirements
 

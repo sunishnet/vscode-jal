@@ -2,7 +2,7 @@
     "name": "jal",
     "displayName": "JAL",
     "description": "Just Another Language for PIC microcontrollers",
-    "version": "0.0.1",
+    "version": "2021.0.2",
     "author": "Sunish Issac",
     "publisher": "suniship",
     "engines": {
@@ -38,7 +38,7 @@
                 "jal.paths.LibPath": {
                     "type": "string",
                     "default": "D://jallib1.5//lib",
-                    "description": "Compiler path of jal."
+                    "description": "Library paths of jal.(More than one path can be appended with semicolon(;)"
                 },
                 "jal.paths.documentPath": {
                     "type": "string",

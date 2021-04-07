@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Just Another Language (JAL)",
-  "foldingStartMarker": "(?i)^\\s*(begin|if|forever loop|procedure|function)\\b",
+  "foldingStartMarker": "(?i)^\\s*(begin|if|forever loop|procedure|function|block)\\b",
   "foldingStopMarker": "(?i)^\\s*(end)\\b",
   "keyEquivalent": "^~S",
 
@@ -38,7 +38,7 @@
           "name": "keyword.control.other.jal",
           "match": "\\b(?<!\\.)(?i:('get|'put|_debug|_error|_usec_delay|_warn|target))"
         }
-        
+
       ]
     },
     "constants": {
@@ -52,14 +52,14 @@
         },
         {
           "name": "constant.language.other.jal",
-          "match": "\\b(?<!\\.)(?i:(CLOCK|OSC|WDT|BROWNOUT|MCLR|DISABLED|EXTERNAL|WDT|XINST|HS|DEBUG|CPUDIV|PLLDIV|LVP|DISABLED|EXTERNAL))\\b"
+          "match": "\\b(?<!\\.)(?i:(fuse_def|BBEN|BBSIZ|BROWNOUT|CCP2MUXCCP2MUX|CLOCK|CLKOUTEN|CONFIG1H|CONFIG2H|CONFIG2L|CONFIG3H|CONFIG3L|CONFIG4H|CONFIG4L|CONFIG5L|CONTROL|CP|CP0|CP1|CP2|CP3|CPB|CPD|CPUDIV|CSWEN|DEBUG|DIGITAL|DISABLED|EBTR0|EBTR1|EBTR2|EBTR3|EBTRB|ECH_NOCLKOUT|ECL_NOCLKOUT|ECM_NOCLKOUT|ENABLED|EXTERNAL|EXTOSC|EXTOSC_4PLL|F128|F128K|F16K|F1K|F1M|F256|F256K|F2K|F2M|F32|F32K|F4K|F4M|F512|F512K|F64|F64K|F8K|F8M|FCMEN|HFINTOSC_1MHZ|HFINTOSC_64MHZ|HS|HS_PLL|IESO|INTERNAL|INTOSC_NOCLKOUT|IVT1WAY|LFINTOSC|LOW_POWER|LP|LPBOREN|LPT1OSC|LVP|MCLR|MFINTOSC|MVECEN|OFF|ON|OSC|P0|P1|P2|P3|P4|P5|P25|P32|P32k|P38|P50|P62|P75|P88|PBADEN|PLLDIV|PPS1WAY|PR1WAY|PWRT_1|PWRT_16|PWRT_64|PWRT_OFF|PWRTE|PWRTS|RSTOSC|RUNONLY|SAFEN|SOFTWARE|SOSC|STVR|USBDIV|V21|V21|V25|V27|V28|VOLTAGE|VREGEN|WDT|WDTCON_SWDTEN|WDTCCS|WDTCPS|WDTPS|WDTCWS|WRT0|WRT1|WRT2|WRT3|WRTAPP|WRTB|WRTB|WRTC|WRTC|WRTD|WRTD|WRTSAF|WSIZE_1024|WSIZE_2048|WSIZE_4096|WSIZE_512|WSIZE_8192|XINST|XT|ZCD))\\b"
         }
       ]
     },
     "strings": {
       "name": "string.quoted.double.jal",
-      "begin": "\"",
-      "end": "\"",
+      "begin": "\"|'",
+      "end": "\"|'",
       "patterns": [{
         "name": "constant.character.escape.jal",
         "match": "\\\\."
