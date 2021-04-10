@@ -76,7 +76,7 @@ Multiple library paths can be separated with ;
 
 
 ## Known Issues
-Opening include files,library files not possible unless file is in teh same directory
+Opening include files,library files not possible unless file is in the same directory
 No debugging
 
 
