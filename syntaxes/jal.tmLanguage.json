@@ -5,7 +5,8 @@
   "foldingStopMarker": "(?i)^\\s*(end)\\b",
   "keyEquivalent": "^~S",
 
-  "patterns": [{
+  "patterns": [
+    {
       "include": "#comments"
     },
     {
@@ -15,34 +16,49 @@
       "include": "#constants"
     },
     {
+      "include": "#support"
+    },
+    {
       "include": "#strings"
     }
   ],
   "repository": {
     "comments": {
-      "patterns": [{
-        "name": "comment.control.jal",
-        "match": ";.*$|--.*$"
-      }]
+      "patterns": [
+        {
+          "name": "comment.control.jal",
+          "match": ";.*$|--.*$"
+        }
+      ]
     },
+    "support": {
+      "patterns": [
+        {
+          "name": "support.type.jal",
+          "match": "\\b(?<!\\.)(?i:(bit|byte|dword|float|record|sbit|sbyte|sdword|sword|volatile|word))\\b"
+        }
+      ]
+    },
+
     "keywords": {
-      "patterns": [{
+      "patterns": [
+        {
           "name": "keyword.control.jal",
-          "match": "\\b(?<!\\.)(?i:(alias|asm|assembler|assert|at |bank|bit|block|byte|case|const|count|defined|dword|else|elsif|end|exit|float|for|forever|function|if|in|include|is|keep|local|loop|out|page|pragma|procedure|protection|record|repeat|sbit|sbyte|sdword|shared|start|suspend|sword|task|then|var|volatile|whereis|while|word))\\b"
+          "match": "\\b(?<!\\.)(?i:(alias|asm|assembler|assert|at |bank|block|case|const|count|defined|else|elsif|end|exit|for|forever|function|if|in|include|is|keep|local|loop|out|page|pragma|procedure|protection|repeat|return|shared|start|suspend|task|then|var|whereis|while))\\b"
         },
         {
-          "match": "\\b(\\=|\\>|\\<|\\!|\\?|\\+|\\-|\\*|\\/|\\&|\\^|\\%|\\=)\\b",
+          "match": "(\\=|\\>|\\<|\\!|\\?|\\+|\\-|\\*|\\/|\\&|\\^|\\%|\\=)",
           "name": "keyword.operator.jal"
         },
         {
           "name": "keyword.control.other.jal",
           "match": "\\b(?<!\\.)(?i:('get|'put|_debug|_error|_usec_delay|_warn|target))"
         }
-
       ]
     },
     "constants": {
-      "patterns": [{
+      "patterns": [
+        {
           "name": "constant.language.jal",
           "match": "\\b(?<!\\.)(?i:(true|false|on|off|high|low|input|output|all_output|all_in))\\b"
         },
@@ -60,10 +76,12 @@
       "name": "string.quoted.double.jal",
       "begin": "\"|'",
       "end": "\"|'",
-      "patterns": [{
-        "name": "constant.character.escape.jal",
-        "match": "\\\\."
-      }]
+      "patterns": [
+        {
+          "name": "constant.character.escape.jal",
+          "match": "\\\\."
+        }
+      ]
     }
   },
   "scopeName": "source.jal"

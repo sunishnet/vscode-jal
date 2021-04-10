@@ -1,16 +1,31 @@
 {
-    "name": "jal",
-    "displayName": "JAL",
+    "name": "vscode-jal",
+    "displayName": "Jal",
     "description": "Just Another Language for PIC microcontrollers",
-    "version": "2021.0.2",
+    "version": "2021.4.10",
     "author": "Sunish Issac",
-    "publisher": "suniship",
+    "publisher": "sunish",
     "engines": {
         "vscode": "^1.54.0"
     },
+    "icon": "images/jal.png",
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/sunishnet/vscode-jal.git"
+    },
+    "bugs": {
+      "url": "https://github.com/sunishnet/vscode-jal/issues"
+    },
+    "homepage": "https://justanotherlanguage.org",
+   
+
+
+
     "categories": [
-        "Programming Languages"
-    ],
+        "Programming Languages",
+        "Snippets"],
+        
     "contributes": {
         "languages": [{
             "id": "jal",
@@ -28,26 +43,26 @@
             "path": "./snippets/jalsnippets.json"
         }],
         "configuration": {
-            "title": "jal",
+            "title": "Jal",
             "properties": {
                 "jal.paths.exePath": {
                     "type": "string",
-                    "default": "D://jallib1.5//compiler//jalv2_64.exe",
+                    "default": "C://jallib1.6//compiler//jalv2_64.exe",
                     "description": "Exe path of JALV2.exe."
                 },
                 "jal.paths.LibPath": {
                     "type": "string",
-                    "default": "D://jallib1.5//lib",
+                    "default": "C://jallib1.6//lib",
                     "description": "Library paths of jal.(More than one path can be appended with semicolon(;)"
                 },
                 "jal.paths.documentPath": {
                     "type": "string",
-                    "default": "D://jallib1.5//doc",
+                    "default": "C://jallib1.6//doc",
                     "description": "Document path of jal."
                 },
                 "jal.paths.programmerPath": {
                     "type": "string",
-                    "default": "D://jallib1.5//pickit.bat",
+                    "default": "C://jallib1.6//pickit.bat",
                     "description": "Programmer Path"
                 }
             }

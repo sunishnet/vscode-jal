@@ -1,7 +1,7 @@
 {
   "for loop": {
     "prefix": ["for loop"],
-    "body": ["for (${2:element}  loop ", "\t$0", "end loop"],
+    "body": ["for ${1:element}  loop ", "\t$0", "end loop"],
     "description": "for loop."
   },
   "forever loop": {
@@ -9,4 +9,18 @@
     "body": ["forever  loop ", "\t$0", "end loop"],
     "description": "forever loop."
   }
+  ,
+  "function": {
+    "prefix": ["function"],
+    "body": ["function is ", "\t$0", "end function"],
+    "description": "function"
+  }
+  ,
+  "procedure": {
+    "prefix": ["procedure"],
+    "body": ["procedure  is ", "\t$0", "end procedure"],
+    "description": "procedure"
+  }
+
+
 }
