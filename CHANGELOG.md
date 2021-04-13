@@ -3,7 +3,7 @@
 ## Release Notes
 ### 2021.4.13
 
-Added Jaledit themes for highlighting syntaxes not  by default VSCode themes
+Added Jaledit themes for highlighting syntaxes which are not highlighted by default VSCode themes
 Changed icon
 Added missing keywords
 
