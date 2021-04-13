@@ -14,33 +14,65 @@ Will try to implement all the features of jaledit in this extension.
 
 
 ## Features
+ 
+ * Extremely fast loading/saving of the largest jal files
+ * VSCode features like commenting, searching, file explorer 
+ * Git support within vscode 
+ * Builtin comparison tool
+ * Auto completion
+![loading biggest file in jallib](images/vscodeload.gif "Fast loading of largest jal include file" )
+
 * **Syntax highlighting**
     
-    - Comments (-- & ;)
-    - Keywords (Control, Operator, Other)
-    - Constants (Language,Numeric,Other)
-    - Strings (Single/Double quote)
+    * Comments (-- & ;)
+    * Keywords (Control, Operator, Other)
+    * Constants (Language,Numeric,Other)
+    * Strings (Single/Double quote)
     
 * **Code Folding**
     
-    - Procedures
-    - Functions
-    - Loops
-    - Blocks
+    * Procedures
+    * Functions
+    * Loops
+    * Blocks
+![code folding and commenting](/images/jalcodefolding.gif "Code folding")
+* **Intellisense, Code Snippets and Comment**
+    
+    *Partial intellisense without language server*
+![Intellisense,code snippets and commenting](/images/autocomp_comment.gif "Intellisense,code snippets and commenting")    
     
 * **Build using User tasks.json**
-    - Works on Windows and Linux
+    * Works on Windows and Linux
 
+![Build Fail](/images/buildfail.gif "Ctrl-Click takes to error line on build failure")
 
+* **Jaledit Theme**
+    
+    Theme added to highlight syntaxes which were not differentiated by default VSCode themes.
+    * Jaledit like Light Theme
+    * Jaledit Dark theme
+
+![Jaledit Light and Dark themes](/images/themeswitch.gif "Two JALedit themes")
 
 ## Requirements
-Configure Tasks to build the jal file 
-Please copy the below json text to tasks.json which can be opened by Selecting Terminal - Configure Tasks menu option in vscode.
+
+**Prerequisites**
+JAL compiler is required. You can download the compiler and libraries from  http://www.justanotherlanguage.org/downloads/ or  https://github.com/jallib/jallib
+
+**Configure Tasks to build the jal file (User Level)**
+
+
+1. Copy the below json text to Clipboard.
+2. Press Ctrl-Shift-P.
+3. Type/select "Tasks:Open User Tasks".
+4. Select Others (Example to run arbitary command).
+5. In the opened tasks.json paste the text from clipboard. 
+6. Close the tab and you are ready to compile the JAL file.
+
+![tasks.json config](/images/configtasks.json.gif "a title")
 
 ```json
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     // prefilled tasks.json for compiling a JAL file
     "version": "2.0.0",
     "tasks": [
@@ -70,25 +102,23 @@ Please copy the below json text to tasks.json which can be opened by Selecting T
 
 
 ## Extension Settings
-You can configure the executable path and library path by going to VS Code preferences - Extensions -JAL
+You can configure the executable path and library path by going to VS Code preferences * Extensions -JAL
 Paths with \ and \\ both work.
 Multiple library paths can be separated with ; 
 
 
 ## Known Issues
-Opening include files,library files not possible unless file is in teh same directory
+Opening include files,library files not possible unless file is in the same directory
+
 No debugging
 
 
 ## Release Notes
+    
+    * Two themes added to highlight syntaxes which were not differentiated by default VSCode themes.
+    * Changed Icon
+    * Added missing keywords
 
-First version on marketplace
+## Change Log 
 
-### 2021.4.10
-
-Initial release of JAL VS Code Extension ...
-
-Basic syntax highlighting
-Code folding
-Snippets working
-Build using Terminal - Run task
+See the [Change log](https://github.com/sunishnet/vscode-jal/blob/master/CHANGELOG.md) for details about the changes in each version.

@@ -1,9 +1,19 @@
 # Change Log
 
-All notable changes to the "jal" extension will be documented in this file.
+## Release Notes
+### 2021.4.13
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+Added Jaledit themes for highlighting syntaxes not  by default VSCode themes
+Changed icon
+Added missing keywords
 
-## [Unreleased]
+### 2021.4.10
+First version on marketplace
 
-- Initial release
+**Initial release of JAL VS Code Extension ...**
+
+- Basic syntax highlighting
+- Code folding
+- Snippets working
+- Build using Terminal - Run task
+

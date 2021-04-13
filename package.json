@@ -2,7 +2,7 @@
     "name": "vscode-jal",
     "displayName": "Jal",
     "description": "Just Another Language for PIC microcontrollers",
-    "version": "2021.4.10",
+    "version": "2021.4.13",
     "author": "Sunish Issac",
     "publisher": "sunish",
     "engines": {

@@ -195,7 +195,7 @@
             "name": "Strings",
             "scope": "string",
             "settings": {
-                "foreground": "#800000",
+                "foreground": "#CE9178",
                 "fontStyle": "italic"
             }
         },
