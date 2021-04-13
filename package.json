@@ -42,6 +42,20 @@
             "language": "jal",
             "path": "./snippets/jalsnippets.json"
         }],
+        "themes": [
+			{
+				"id":"Jaledit",
+                "label": "Jaledit",
+				"uiTheme": "vs",
+				"path": "./themes/light/jal-light-theme.json"
+			},
+            {
+				"id":"Jedit Dark",
+                "label": "Jaledit (Dark)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/dark/jal-dark-theme.json"
+			}
+		],
         "configuration": {
             "title": "Jal",
             "properties": {
