@@ -122,3 +122,4 @@ No debugging
 ## Change Log 
 
 See the [Change log](https://github.com/sunishnet/vscode-jal/blob/master/CHANGELOG.md) for details about the changes in each version.
+Code folding
